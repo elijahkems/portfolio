@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script defer src="./animate.js"></script>
+    <script defer type="module" src="./main.js"></script>
+
+    <link rel="shortcut icon" href="./assets/circle.svg" type="image/x-icon" />
+  </head>
+  <body class="mx-auto gradient-bg text-grey xl:max-w-[1280px] scroll-smooth">
+    <!-- nav -->
+    <nav>
+      <ul class="flex justify-around text-md py-10 px-5 text-white w-full">
+        <li class="head basis-1/3 sm:basis-1/2 text-purple">Elijah</li>
+        <li class="mx-auto sm:mx-10 hover:text-lightblue">
+          <a class="py-5" href="#about">About</a>
+        </li>
+        <li class="mx-auto sm:mx-10 hover:text-lightblue">
+          <a class="py-5" href="#contacts">Contact</a>
+        </li>
+        <li class="mx-auto sm:mx-10 hover:text-lightblue">
+          <a class="py-5" href="/projects">Projects</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- hero  -->
+    <section
+      id="hero"
+      class="px-5 flex justify-end relative sm:justify-center md:h-[400px]"
+    >
+      <div class="mb-24 max-w-5xl mx-auto pt-10 sm:pt-10 lg:pt-20 text-white">
+        <p
+          class="sm:pr-10 text-slate-900 font-bold text-2xl sm:text-4xl lg:text-5xl tracking-tight text-center dark:text-white"
+        >
+          Building bridges between your
+          <span class="text-blue pr-1 inline">product </span>and it's
+          <span class="text-blue pl-1 inline">users</span>
+          is my passion
+        </p>
+        <p
+          class="pt-5 font-dosis text-blue text-center text-2xl sm:text-3xl md:font-normal lg:font-normal"
+        >
+          <a class="hover:underline" href="#contacts"
+            >let me be a part of the journey
+          </a>
+        </p>
+      </div>
+      <div class="absolute left-0 bottom-0 top-0 aspect-square">
+        <img
+          draggable="false"
+          class="w-full h-full opacity-20 blur-lg"
+          src="/assets/abstract.png"
+          alt="abstract image"
+        />
+      </div>
+    </section>
+
+    <!-- about me -->
+    <section id="about" class="px-5 pb-4 flex md:max-w-4xl">
+      <div class="">
+        <h2
+          class="text-blue p-4 text-2xl sm:text-4xl font-extrabold tracking-tight dark:text-slate-50"
+        >
+          About me
+        </h2>
+        <p class="p-4 pt-0 text-base sm:text-lg">
+          As passionate web developer specializing in
+          <span class="text-lightblue">front-end development</span>, I craft
+          dynamic and user-friendly websites that deliver
+          <span class="text-lightblue">seamless experiences</span>.
+        </p>
+        <p class="p-4 pt-0 text-base sm:text-lg">
+          I value collaboration, strong client relationships, and translating
+          goals into successful web solutions.
+        </p>
+        <button class="m-4 text-lg hover:text-lightblue text-blue rounded">
+          <a class="" href="/">Resume</a>
+        </button>
+        <!-- palate -->
+        <div class="flex col-span-2"></div>
+      </div>
+    </section>
+    <!-- categories-->
+    <section class="px-9 pb-4 flex flex-col">
+      <h2
+        class="text-blue text-2xl sm:text-4xl font-extrabold tracking-tight dark:text-slate-50"
+      >
+        Workstation
+      </h2>
+      <!-- buttons container -->
+      <div class="pt-4 flex sm:gap-5 font-bold">
+        <div>
+          <button
+            class="p-2 px-3 rounded hover:text-lightblue border border-lightblue"
+            id="languages"
+          >
+            Languages
+          </button>
+        </div>
+        <div>
+          <button
+            class="p-2 px-3 rounded border border-transparent hover:text-lightblue"
+            id="framework"
+          >
+            Frameworks
+          </button>
+        </div>
+        <div>
+          <button
+            class="p-2 px-3 rounded border border-transparent hover:text-lightblue"
+            id="tools"
+          >
+            Tools
+          </button>
+        </div>
+      </div>
+      <!-- list container -->
+      <div>
+        <ul id="list-container" class="min-h-[12em] text-base sm:text-lg">
+          <li class="group my-2 text-center flex gap-5">
+            <img
+              class="m-2 w-8"
+              src="/assets/javascript (es6)-icon.png"
+              alt=""
+            />
+            <p class="p-3 group-hover:text-lightblue">javascript (es6)</p>
+          </li>
+          <li class="group my-2 text-center flex gap-5">
+            <img class="m-2 w-8" src="/assets/python-icon.png" alt="" />
+            <p class="p-3 group-hover:text-lightblue">python</p>
+          </li>
+          <li class="group my-2 text-center flex gap-5">
+            <img class="m-2 w-8" src="/assets/php-icon.png" alt="" />
+            <p class="p-3 group-hover:text-lightblue">php</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- contacts -->
+    <section id="contacts" class="px-5 text-white">
+      <h2
+        class="text-blue p-4 text-2xl sm:text-4xl font-extrabold tracking-tight dark:text-slate-50"
+      >
+        Get in touch
+      </h2>
+      <!-- form -->
+      <form
+        action=""
+        id="contact-form"
+        class="p-4 sm:grid sm:grid-cols-2 sm:gap-10"
+      >
+        <!-- first div -->
+        <div class="flex flex-col justify-between gap-5 sm:gap-0 max-h-60">
+          <div
+            class="rounded p-1 border border-transparent bg-compliment1 flex hover:border-lightblue"
+          >
+            <label for="name" class="p-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="from_name"
+              required
+              class="p-2 outline-none w-full bg-transparent rounded"
+              placeholder="your name "
+            />
+          </div>
+          <!-- <div class="text-coral pl-3">
+            <p>
+               error message
+            </p>circles
+          </div> -->
+          <div
+            class="rounded p-1 border border-transparent bg-compliment1 flex hover:border-lightblue"
+          >
+            <label for="email" class="p-2">Email</label>
+            <input
+              type="text"
+              id="email"
+              name="from_email"
+              required
+              class="p-2 outline-none w-full bg-transparent rounded"
+              placeholder="something@email"
+            />
+          </div>
+          <div
+            class="rounded p-1 border border-transparent bg-compliment1 flex hover:border-lightblue"
+          >
+            <label for="subject" class="p-2">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              class="p-2 outline-none w-full bg-transparent rounded"
+              placeholder="Reaching out"
+            />
+          </div>
+        </div>
+        <!-- second div -->
+        <div
+          class="my-5 sm:my-0 rounded flex flex-col bg-compliment1 border border-transparent hover:border-lightblue"
+        >
+          <div class="px-4 flex justify-between">
+            <label class="py-2" for="message">Message</label>
+            <button
+              type="button"
+              id="submit-btn"
+              class="bg-transparent rounded p-2 hover:text-blue hover:animate-pulse"
+            >
+              Submit
+            </button>
+            <!-- success div -->
+            <div id="success-div" class="text-blue flex hidden">
+              <p class="p-2">
+                <!-- message -->
+              </p>
+            </div>
+          </div>
+          <textarea
+            name="message"
+            id="message"
+            required
+            rows="7"
+            class="p-4 bg-transparent outline-none rounded-lg resize-none"
+            placeholder="Write your message"
+          ></textarea>
+        </div>
+      </form>
+    </section>
+    <!-- footer -->
+    <footer class="px-5 pb-4 relative">
+      <h2
+        class="text-blue p-4 text-2xl sm:text-4xl font-extrabold tracking-tight dark:text-slate-50"
+      >
+        Socials
+      </h2>
+      <ul class="m-4 text-base sm:text-lg">
+        <li class="flex gap-5 my-2">
+          <img class="m-2 w-8" src="/assets/instagram-icon.png" alt="" />
+          <p class="p-3 hover:text-lightblue"><a href="">Instagram</a></p>
+        </li>
+        <li class="flex gap-5">
+          <img class="m-2 w-8" src="/assets/facebook-icon.png" alt="" />
+          <p class="p-3 hover:text-lightblue"><a href="">Facabook</a></p>
+        </li>
+        <li class="flex gap-5 align-center">
+          <img class="m-2 w-8" src="/assets/linkedin-icon.png" alt="" />
+          <p class="p-3 hover:text-lightblue">
+            <a href="">LinkedIn</a>
+          </p>
+        </li>
+      </ul>
+      <p class="text-center">&copy; 2023 elijahkems</p>
+      <img
+        draggable="false"
+        class="absolute top-0 right-0 md:right-[20%] h-full opacity-20"
+        src="/assets/circles.png"
+        alt="abstract image"
+      />
+    </footer>
+  </body>
+</html>
